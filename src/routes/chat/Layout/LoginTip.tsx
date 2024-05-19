@@ -20,7 +20,9 @@ const LoginTip = ({ placement = "chat" }: Props) => {
   const handleSignIn = () => {
     // dispatch(resetAuthData());
     // clearLocalData();
-    navigateTo("/login");
+    // navigateTo("/login");
+
+    window.postMessage("login_request", "*");
   };
 
   return (
