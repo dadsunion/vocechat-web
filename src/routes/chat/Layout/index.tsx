@@ -3,7 +3,6 @@ import { useDrop } from "react-dnd";
 import { NativeTypes } from "react-dnd-html5-backend";
 import { toast } from "react-hot-toast";
 import clsx from "clsx";
-
 import { useAppSelector } from "@/app/store";
 import { ChatContext } from "@/types/common";
 import ImagePreview from "@/components/ImagePreview";
