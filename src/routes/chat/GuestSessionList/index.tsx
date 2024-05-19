@@ -45,7 +45,7 @@ const SessionList: FC<Props> = () => {
           return <Session key={key} id={id} mid={mid} />;
         })}
       </ul>
-      <LoginTip placement="session" />
+      {/* <LoginTip placement="session" /> */}
     </>
   );
 };

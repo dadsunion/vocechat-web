@@ -104,7 +104,7 @@ export default function MessageInput({
             placeholder={placeholder}
           />
           <MentionCombobox items={items} />
-          <div className="absolute left-3 bottom-3">
+          <div className="absolute left-3 bottom-2">
             <EmojiInputPicker />
           </div>
         </Plate>

@@ -109,7 +109,16 @@ const Message: FC<IProps> = ({
         isSelf && "flex-row-reverse"
       )}
     >
-      <Tippy
+      <div className="cursor-pointer w-10 h-10 shrink-0" data-uid={fromUid} ref={avatarRef}>
+        <Avatar
+          className="w-10 h-10 rounded-full object-cover"
+          width={40}
+          height={40}
+          src={currUser?.avatar}
+          name={currUser?.name}
+        />
+      </div>
+      {/* <Tippy
         key={_key}
         popperOptions={{ strategy: "fixed" }}
         disabled={readOnly}
@@ -127,7 +136,7 @@ const Message: FC<IProps> = ({
             name={currUser?.name}
           />
         </div>
-      </Tippy>
+      </Tippy> */}
       <ContextMenu
         editMessage={toggleEditMessage}
         context={context}
@@ -160,7 +169,7 @@ const Message: FC<IProps> = ({
             className={clsx(`flex items-center gap-2 font-semibold`, isSelf && "flex-row-reverse")}
           >
             <span className="text-primary-500 text-sm">{currUser?.name || "Deleted User"}</span>
-            <Tooltip
+            {/* <Tooltip
               delay={200}
               disabled={!timePrefix || readOnly}
               placement="top"
@@ -171,7 +180,7 @@ const Message: FC<IProps> = ({
                   ? `${timePrefix} ${dayjsTime.format("h:mm A")}`
                   : dayjsTime.format("YYYY-MM-DD h:mm:ss A")}
               </time>
-            </Tooltip>
+            </Tooltip> */}
             {failed && (
               <span className="text-red-500 text-xs flex items-center gap-1">
                 <IconInfo className="stroke-red-600 w-4 h-4" /> Send Failed
@@ -180,7 +189,7 @@ const Message: FC<IProps> = ({
           </div>
           <div
             className={clsx(
-              `select-text text-gray-800 text-sm wb whitespace-pre-wrap dark:!text-white`,
+              `select-text text-gray-800 text-sm wb whitespace-pre-wrap dark:!text-white px-3 py-1.5 bg-[#E9E9E9] rounded-[8px]`,
               sending && "opacity-90"
             )}
           >

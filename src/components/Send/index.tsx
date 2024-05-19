@@ -160,7 +160,7 @@ const Send: FC<IProps> = ({
       {/* PC input */}
       <div
         className={clsx(
-          `send mb-2 md:mb-0 relative bg-gray-200 rounded-lg w-full dark:bg-gray-600 ${mode} ${
+          `relative bg-gray-200 rounded-lg w-full bg-[white] ${mode} ${
             markdownFullscreen ? "fullscreen" : ""
           } ${replying_mid ? "reply" : ""} ${context}`,
           isMarkdownMode && markdownFullscreen && "-mt-9"
@@ -171,7 +171,7 @@ const Send: FC<IProps> = ({
 
         <div
           className={clsx(
-            `flex justify-between items-center px-4 py-3.5`,
+            `flex justify-between items-center bg-[white] shadow-[0px_-4px_10px_0px_rgba(0,0,0,0.1)] px-3 py-2`,
             isMarkdownMode ? `grid grid-cols-[1fr_1fr] grid-rows-[auto_auto] gap-0` : "gap-4"
           )}
         >
@@ -189,7 +189,8 @@ const Send: FC<IProps> = ({
               id={`${context}_${id}`}
               updateMessage={setMsg}
               sendMessage={handleSendMessage}
-              placeholder={placeholder}
+              // placeholder={placeholder}
+              placeholder="我来说几句~"
             />
           )}
           <Toolbar
@@ -202,16 +203,6 @@ const Send: FC<IProps> = ({
             fullscreen={markdownFullscreen}
             toggleMarkdownFullscreen={toggleMarkdownFullscreen}
           />
-          {mode == Modes.markdown && (
-            <MarkdownEditor
-              updateDraft={getUpdateDraft("markdown")}
-              initialValue={getDraft("markdown")}
-              height={markdownFullscreen ? `calc(100vh - 168px)` : `30vh`}
-              placeholder={placeholder}
-              setEditorInstance={setMarkdownEditor}
-              sendMarkdown={sendMarkdown}
-            />
-          )}
         </div>
       </div>
     </>

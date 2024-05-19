@@ -111,7 +111,7 @@ function ChannelChat({ cid = 0, dropFiles = [] }: Props) {
       }
       header={
         <header className="px-5 py-4 flex items-center justify-center md:justify-between shadow-[inset_0_-1px_0_rgb(0_0_0_/_10%)]">
-          <GoBackNav />
+          {/* <GoBackNav /> */}
           <div className="flex items-center gap-1">
             <Link
               to={`/setting/channel/${cid}/overview?f=/chat/channel/${cid}`}

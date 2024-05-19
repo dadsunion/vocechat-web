@@ -33,13 +33,13 @@ const Editor = React.forwardRef<HTMLDivElement, EditorProps>(
       }
     );
     return (
-      <div ref={ref} className="relative h-fit w-full pl-10">
+      <div ref={ref} className="relative  h-fit  w-full pl-10">
         <PlateContent
           className={cn(
             "relative overflow-hidden whitespace-pre-wrap break-words",
-            "w-full rounded-md bg-background ring-offset-background placeholder:text-gray-500 focus-visible:outline-none",
+            "w-full rounded-md text-xs bg-[rgb(243,243,243)] rounded-[50px] px-3 py-1 ring-offset-background placeholder:text-gray-500 focus-visible:outline-none",
             "[&_[data-slate-placeholder]]:opacity-30",
-            "[&_[data-slate-placeholder]]:top-[4px_!important]",
+            "[&_[data-slate-placeholder]]:top-[8px_!important]",
             className
           )}
           spellCheck={false}

@@ -105,11 +105,21 @@ const Layout: FC<Props> = ({
               {context == "dm" && <DMVoice uid={to} />}
               {context == "dm" && <AddContactTip uid={to} />}
               {/* 消息流 */}
-              <VirtualMessageFeed key={`${context}_${to}`} context={context} id={to} />
+              {readonly ? (
+                <>
+                  {/* <div className="w-full h-full flex items-center justify-center"></div> */}
+                  <VirtualMessageFeed key={`${context}_${to}`} context={context} id={to} />
+                </>
+              ) : (
+                <VirtualMessageFeed key={`${context}_${to}`} context={context} id={to} />
+              )}
               {/* 发送框 */}
-              <div className={`px-2 py-0 md:p-4 ${selects ? "selecting" : ""}`}>
+              <div className={`py-0 md:p-4 ${selects ? "selecting" : ""}`}>
                 {readonly ? (
-                  <LoginTip />
+                  <>
+                    <LoginTip />
+                    <Send key={to} id={to} context={context} />
+                  </>
                 ) : reachLimit ? (
                   <LicenseUpgradeTip />
                 ) : (
@@ -122,7 +132,7 @@ const Layout: FC<Props> = ({
             </div>
           </div>
         </main>
-        {aside && (
+        {/* {aside && (
           <div
             className={clsx(
               "flex z-50 p-3 absolute right-0 md:translate-x-full flex-col",
@@ -131,7 +141,7 @@ const Layout: FC<Props> = ({
           >
             {aside}
           </div>
-        )}
+        )} */}
         {users && <div className="hidden md:block">{users}</div>}
         {voice && (
           <div className="z-10 max-md:absolute max-md:right-11 max-md:top-14 max-md:overflow-y-scroll bg-white dark:!bg-gray-700 md:block">

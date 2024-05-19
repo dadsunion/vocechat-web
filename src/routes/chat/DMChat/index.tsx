@@ -52,7 +52,7 @@ const DMChat: FC<Props> = ({ uid = 0, dropFiles }) => {
       }
       header={
         <header className="box-border px-5 py-1 flex items-center justify-center md:justify-between shadow-[inset_0_-1px_0_rgb(0_0_0_/_10%)]">
-          <GoBackNav />
+          {/* <GoBackNav /> */}
           <User interactive={false} uid={currUser.uid} enableNavToSetting={true} />
         </header>
       }
