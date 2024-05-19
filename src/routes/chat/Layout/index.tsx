@@ -17,7 +17,7 @@ import LicenseUpgradeTip from "./LicenseOutdatedTip";
 import LoginTip from "./LoginTip";
 import Operations from "./Operations";
 import VirtualMessageFeed from "./VirtualMessageFeed";
-import { platform } from "@/utils";
+// import { platform } from "@/utils";
 import { shallowEqual } from "react-redux";
 
 interface Props {
