@@ -95,7 +95,7 @@ const Layout: FC<Props> = ({
       <ImagePreview container={messagesContainer.current} />
       <section ref={drop} className={`relative h-full w-full rounded-r-2xl flex`}>
         <main className="flex flex-col flex-1">
-          {header}
+          {/* {header} */}
           <div className="w-full h-full flex items-start justify-between relative">
             <div
               className="rounded-br-2xl flex flex-col absolute bottom-0 w-full h-full"
@@ -117,7 +117,6 @@ const Layout: FC<Props> = ({
                 {readonly ? (
                   <>
                     <LoginTip />
-                    <Send key={to} id={to} context={context} />
                   </>
                 ) : reachLimit ? (
                   <LicenseUpgradeTip />

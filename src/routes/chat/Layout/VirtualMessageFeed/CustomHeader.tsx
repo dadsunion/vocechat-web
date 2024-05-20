@@ -46,7 +46,7 @@ const CustomHeader = ({ context }: Props) => {
   const { id, isChannel, loadingMore } = context;
   return (
     <>
-      {isChannel ? <ChannelHeader cid={id} /> : null}
+      {/* {isChannel ? <ChannelHeader cid={id} /> : null} */}
       <div className={clsx("mt-2 w-full py-2 ", loadingMore ? "flex-center" : "hidden")}>
         <Waveform size={18} lineWeight={4} speed={1} color="#ccc" />
       </div>
