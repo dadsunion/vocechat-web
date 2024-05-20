@@ -53,8 +53,8 @@ i18n
     ns: ["common", "chat", "member", "setting", "fav", "file", "welcome", "auth", "widget"],
     defaultNS,
     load: "languageOnly",
-    // lng: "jp",
-    fallbackLng: "en",
+    lng: "zh",
+    fallbackLng: "zh",
     fallbackNS: "common",
     debug: false,
     detection: {

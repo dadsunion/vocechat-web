@@ -8,7 +8,7 @@ import { Theme } from "../../../types/common";
 // type Props = {}
 
 const DarkMode = () => {
-  const [theme, setTheme] = useState<Theme>(localStorage.theme || "auto");
+  const [theme, setTheme] = useState<Theme>(localStorage.theme || "light");
   const { t } = useTranslation("setting");
   const handleThemeToggle = (v: Theme) => {
     setTheme(v);
