@@ -22,7 +22,7 @@ const LoginTip = ({ placement = "chat" }: Props) => {
     // clearLocalData();
     // navigateTo("/login");
 
-    window.postMessage("login_request", "*");
+    window.parent.postMessage("login_request", "*");
   };
 
   return (
