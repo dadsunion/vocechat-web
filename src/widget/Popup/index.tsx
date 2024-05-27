@@ -55,7 +55,7 @@ const Index = ({ handleClose, hostId }: Props) => {
           {notLogin ? null : <MessageInput from={loginUser?.uid || 0} to={hostId} />}
         </>
       )}
-      <Footer />
+      {/* <Footer /> */}
     </aside>
   );
 };
