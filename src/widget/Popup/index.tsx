@@ -36,7 +36,7 @@ const Index = ({ handleClose, hostId }: Props) => {
           : `w-full h-full md:max-w-lg md:h-[calc(100vh_-_20px)] m-auto md:my-2 md:shadow-lg rounded-none md:rounded-md`
       )}
     >
-      <Header handleClose={handleClose} />
+      {/* <Header handleClose={handleClose} /> */}
       {inviteOnly ? (
         <InviteOnlyTip />
       ) : (
